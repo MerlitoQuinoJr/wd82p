@@ -6,6 +6,7 @@ body {
 h1 {
   font-size: 36px;
   font-weight: 900;
+  border: red;
 }
 
 h2 {
