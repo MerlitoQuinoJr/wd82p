@@ -20,7 +20,7 @@
 
 .menu-items {
   margin: 0 auto;
-  list-style-type: none;
+  list-style-type: none; /*list  bullet hide */
   /* border: 1px solid #fff; */
   width: 900px;
 
