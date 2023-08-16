@@ -1,6 +1,6 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -60,11 +60,13 @@
   .feature3 {
     width: 33.3%;
   }
-}
 
-.sign-up {
-  order: 1;
-}
-.content {
-  order: 2;
+  .sign-up {
+    order: 1;
+    height: 200px;
+  }
+
+  .content {
+    order: 2;
+  }
 }
