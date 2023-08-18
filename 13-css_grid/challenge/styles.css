@@ -70,6 +70,17 @@
   grid-row: 3 / 4;
 }
 
+.lorem {
+  font-size: small;
+  text-align: justify;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 1em;
+}
+
 .footer {
   padding: 20px;
   text-align: center;
