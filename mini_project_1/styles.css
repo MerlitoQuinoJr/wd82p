@@ -4,11 +4,18 @@
   box-sizing: border-box;
 }
 
+.page {
+  background-image: url(images/wallpaper.jpg);
+  background-position: center;
+}
+
 .header-container {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   /* background-color: #e7dfd8; */
-  background-color: #b3be62;
+  /* background-color: #b3be62; */
+  color: #168098;
+  backdrop-filter: blur(10px);
   /* height: 100vh; */
 }
 
@@ -62,7 +69,7 @@
 }
 
 .hero-contact {
-  color: #40291a;
+  color: #fff;
   font-size: 40px;
   text-decoration: none;
 }
@@ -105,17 +112,22 @@
 
   .name {
     font-size: 40px;
+    text-decoration: underline;
   }
   .hero-title {
   }
 
   .hero-img {
     width: 70%;
+    padding-top: 3em;
+    padding-bottom: 3em;
 
     align-self: center;
     order: 1;
   }
 
+  .contact-me {
+  }
   .hero-text {
     font-size: 20px;
   }
@@ -139,9 +151,6 @@
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-  .nav-container {
-  }
-
   .hero-container {
     border: 1px solid black;
     margin: 1em 1em 1em 1em;
@@ -191,6 +200,17 @@
     align-self: flex-start;
     gap: 5em;
   }
+
+  .hero-title {
+    padding: 0.5em 0 0 0;
+
+    font-size: 50px;
+  }
+  .name {
+    text-decoration: underline;
+    font-size: 50px;
+  }
+
   .hero-img {
     width: 30%;
 
@@ -205,6 +225,8 @@
   }
   .hero-text {
     text-align: left;
+    font-size: 40px;
+
     padding-top: 50px;
   }
 
