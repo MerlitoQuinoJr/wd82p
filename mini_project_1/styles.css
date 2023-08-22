@@ -107,7 +107,7 @@
 
 /* footer */
 .footer {
-  padding: 3em;
+  padding: 2em;
 
   background-color: #168098;
 
@@ -223,6 +223,32 @@
   }
 
   /* End Skills Mobile */
+
+  /* MOBILE FORM */
+  .form {
+    text-align: center;
+    padding: 1em;
+    color: #168098;
+  }
+
+  .contact-me-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    padding: 1em;
+
+    gap: 1em;
+  }
+
+  .form-container {
+    backdrop-filter: blur(10px);
+    /* border: 1px solid red; */
+    padding: 1em;
+  }
+
+  /* TABLET STARTS HERE */
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -269,9 +295,9 @@
 @media only screen and (min-width: 961px) {
   .hero-container {
     backdrop-filter: blur(10px);
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     margin: 0 5em 5em 5em;
-    padding: 1em;
+    padding: 10em;
 
     display: flex;
     flex-direction: row;
