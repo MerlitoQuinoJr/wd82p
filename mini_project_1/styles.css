@@ -76,12 +76,6 @@
   gap: 1.5em;
 }
 
-.hero-contact {
-  color: #fff;
-  font-size: 40px;
-  text-decoration: none;
-}
-
 /* Project Section */
 
 .projects {
@@ -190,7 +184,7 @@
   }
 
   .hero-img {
-    width: 100%;
+    max-width: fit-content;
     padding-top: 3em;
     padding-bottom: 3em;
 
@@ -200,9 +194,21 @@
   }
 
   .contact-me {
+    font-size: 1px;
   }
   .hero-text {
-    font-size: 15px;
+    font-size: 20px;
+  }
+  .hero-contact {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: fit-content;
+    align-self: center;
+    text-align: center;
+    background-color: #168098;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
   }
 
   /* skills Mobile */
@@ -279,6 +285,45 @@
     gap: 1em;
   }
 
+  .form-row {
+    text-align: left;
+    align-self: left;
+  }
+  .form-row > input {
+    width: 100%;
+    height: 40px;
+    font-size: inherit;
+  }
+
+  .form-row > textarea {
+    width: 100%;
+    height: 100px;
+    font-size: larger;
+    font-weight: 800;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    position: relative;
+
+    color: #ffffff;
+    background-color: #5995da;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+
+  .form-row button:hover {
+    background-color: #76aeed;
+  }
+
+  .form-row button:active {
+    background-color: #407fc7;
+  }
+
   .form-container {
     backdrop-filter: blur(10px);
     /* border: 1px solid red; */
@@ -315,9 +360,21 @@
   }
 
   .hero-img {
-    width: 100%;
+    max-width: max-content;
 
     order: 1;
+  }
+
+  .hero-contact {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: fit-content;
+    align-self: center;
+    text-align: center;
+    background-color: #168098;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
   }
 
   /* Skills Tablet */
@@ -378,7 +435,10 @@
   }
   /* Projects Ends Here! */
 
+  /* Tablet FORM */
+
   .form {
+    border: 1px solid #fff;
     text-align: center;
     padding: 1em;
     color: #168098;
@@ -393,6 +453,45 @@
     padding: 1em;
 
     gap: 1em;
+  }
+
+  .form-row {
+    text-align: left;
+    align-self: left;
+  }
+  .form-row > input {
+    width: 100%;
+    height: 40px;
+    font-size: inherit;
+  }
+
+  .form-row > textarea {
+    width: 100%;
+    height: 100px;
+    font-size: larger;
+    font-weight: 800;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    position: relative;
+
+    color: #ffffff;
+    background-color: #5995da;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+
+  .form-row button:hover {
+    background-color: #76aeed;
+  }
+
+  .form-row button:active {
+    background-color: #407fc7;
   }
 
   .form-container {
@@ -428,7 +527,7 @@
   }
 
   .hero-img {
-    width: 100%;
+    max-width: fit-content;
 
     order: 1;
   }
@@ -444,12 +543,26 @@
     font-size: 30px;
 
     padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .hero-contact {
+  /* .hero-contact {
     padding-top: 50px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  } */
+  .hero-contact {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: fit-content;
+    align-self: center;
+    text-align: center;
+    background-color: #168098;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
   }
-
   /* Browser SKills */
 
   .skill img {
@@ -504,5 +617,70 @@
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.149) 2.95px 2.95px 2.6px;
   }
+  /* Tablet FORM */
+
+  .form {
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 1em;
+    color: #168098;
+  }
+
+  .contact-me-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    padding: 1em;
+
+    gap: 1em;
+  }
+
+  .form-row {
+    text-align: left;
+    align-self: left;
+  }
+  .form-row > input {
+    width: 100%;
+    height: 40px;
+    font-size: inherit;
+  }
+
+  .form-row > textarea {
+    width: 100%;
+    height: 100px;
+    font-size: larger;
+    font-weight: 800;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    position: relative;
+
+    color: #ffffff;
+    background-color: #5995da;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 10px;
+    cursor: pointer;
+  }
+
+  .form-row button:hover {
+    background-color: #76aeed;
+  }
+
+  .form-row button:active {
+    background-color: #407fc7;
+  }
+
+  .form-container {
+    backdrop-filter: blur(10px);
+    /* border: 1px solid red; */
+    padding: 1em;
+  }
 }
+
 /* Desktop Ends Here! */
