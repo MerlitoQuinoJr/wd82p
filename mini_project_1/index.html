@@ -13,27 +13,36 @@
   <body>
     <div class="page">
       <header class="header-container">
-        <!-- <section class="link-cont"> -->
+        <section class="dd-menu">
+
+          <div class="logo">
+            <h2 class="my-logo">LOGO</h2>
+        </div>
         <nav class="nav-container">
           <ul class="links">
             <li class="bio">Bio</li>
-            <li class="project">Projects</li>
-            <!-- <li class="services">Services</li> -->
-            <li class="contact-me">Contact Me</li>
+            <li class="project"><a href="#project">Projects</a></li>
+            <li class="contact-me"><a href="#contact-me">Contact Me</a></li>
           </ul>
         </nav>
-
+        
         <div class="dropdown">
-          <button class="dropbtn">
+          
+          
+          <div class="dropbtn">
             <!-- <img src="images/options_3482452.png" alt="Bars" /> -->
             <i class="bars fa-solid fa-bars"></i>
-          </button>
+          </div>
+       
+       
           <div class="dropdown-content">
             <a href="#">Bio</a>
-            <a href="#">Projects</a>
+            <a href="#project">Projects</a>
             <a href="#contact-me">Contact</a>
           </div>
+        
         </div>
+      </section>
 
         <!-- </section> -->
         <section class="hero-container">
@@ -86,7 +95,7 @@
         </div>
       </section>
       <main class="main">
-        <section class="projects">
+        <section class="projects" id="project">
           <h4>MY PROJECTS</h4>
           <div class="projects-container">
             <article>
@@ -143,16 +152,16 @@
         <section class="form">
           <h4 id="contact-me">Interested? Contact Me!</h4>
           <form class="contact-me-form">
-            <section class="form-row">
-              <label for="name">Name:</label><br />
+            <section class="form-row fname">
+              <label for="name">Name:</label>
               <input type="text" id="name" name="name" />
             </section>
-            <section class="form-row">
-              <label for="phone">Phone Number:</label><br />
+            <section class="form-row phone">
+              <label for="phone">Phone Number:</label>
               <input type="number" id="phone" name="phone" />
             </section>
-            <section class="form-row">
-              <label for="email">Email:</label><br />
+            <section class="form-row email">
+              <label for="email">Email:</label>
               <input
                 type="email"
                 id="email"
@@ -160,11 +169,11 @@
                 placeholder="example@gmail.com"
               />
             </section>
-            <section class="form-row">
-              <label for="message">Message:</label><br />
-              <textarea id="message" name="message" rows="4"></textarea>
+            <section class="form-row message">
+              <label for="message">Message:</label>
+              <textarea id="messages" name="message" rows="4"></textarea>
             </section>
-            <section class="form-row">
+            <section class="form-row send">
               <button class="button" type="submit" value="Submit" />
               Send </button>
             </section>
