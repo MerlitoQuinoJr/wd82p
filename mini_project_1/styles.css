@@ -4,10 +4,10 @@
   box-sizing: border-box;
 }
 
-.page {
+/* .page {
   background-image: url(images/wallpaper.jpg);
   background-position: center bottom;
-}
+} */
 
 .header-container {
   font-family: Arial, sans-serif;
@@ -30,21 +30,6 @@
   padding: 1em;
 }
 
-/* .dropdown {
-  display: none;
-} */
-
-/* .hero-container {
-  margin: 2em 5em 2em 5em;
-  padding: 1em;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  align-self: flex-start;
-} */
-
 .hero-title {
   padding: 0.5em 0 0 0;
 
@@ -60,12 +45,8 @@
 
 .name {
   font-size: 40px;
-  text-decoration: underline #fff;
+  text-decoration: underline;
 }
-
-/* .hero-img {
-  width: 100%;
-} */
 
 .content {
   display: flex;
@@ -87,7 +68,7 @@
 
 /* footer */
 .footer {
-  padding: 2em;
+  padding: 1.5em;
 
   background-color: #168098;
 
@@ -99,6 +80,10 @@
 /* Mobile Starts Here!*/
 
 @media only screen and (max-width: 400px) {
+  .page {
+    background-image: url(images/wallpaper.jpg);
+    background-position: center bottom;
+  }
   .links {
     gap: 1em;
   }
@@ -143,10 +128,6 @@
     display: flex;
     justify-content: space-between;
   }
-
-  /* .dropbtn > img {
-    width: 30px;
-  } */
 
   .dropbtn {
     background-color: #5b6a74;
@@ -250,13 +231,17 @@
   /* End Skills Mobile */
 
   /* Projects Starts Here! */
+
   .projects {
     padding: 2em;
+    /* background-color: #5995da; */
   }
 
   .projects-container {
     padding: 2em;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+
+    /* background-color: #76aeed; */
   }
 
   .projects > h4 {
@@ -289,7 +274,11 @@
   .form {
     text-align: center;
     padding: 1em;
-    color: #168098;
+    color: #90c5d1;
+  }
+  #contact-me {
+    font-size: larger;
+    font-weight: bolder;
   }
 
   .contact-me-form {
@@ -351,7 +340,21 @@
     /* border: 1px solid red; */
     padding: 1em;
   }
-  /* padding: 50px; */
+
+  .item-fixed {
+    background-color: #5b6a74;
+    /* border: 1px solid #fff; */
+    padding: 0.5em;
+    position: fixed;
+
+    bottom: 0;
+    right: 8px;
+    bottom: 5px;
+    text-decoration: none;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Mobile Ends Here!*/
@@ -359,8 +362,13 @@
 /* TABLET STARTS HERE */
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+  .page {
+    background-image: url(images/wallpaper.jpg);
+    background-position: center bottom;
+  }
   .hero-container {
-    /* border: 1px solid #fff; */
+    border: 1px solid #fff;
+    border-radius: 8px;
     margin: 1em 1em 1em 1em;
     backdrop-filter: blur(10px);
 
@@ -376,6 +384,20 @@
   .logo {
     display: none;
   }
+
+  .resume a {
+    color: #5995da;
+    text-decoration: none;
+  }
+  .project a {
+    color: #5995da;
+    text-decoration: none;
+  }
+  .contact-me a {
+    color: #5995da;
+    text-decoration: none;
+  }
+
   .dropdown {
     display: none;
   }
@@ -387,7 +409,7 @@
   .hero-title {
     padding: 0.5em 0 0 0;
 
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .hero-img {
@@ -396,6 +418,25 @@
     order: 1;
   }
 
+  .hero-text {
+    text-align: left;
+    font-size: 30px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .hero-contact {
+    padding: 10px;
+    border-radius: 5px;
+    max-width: fit-content;
+    align-self: center;
+    text-align: center;
+    background-color: #168098;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
   .hero-contact {
     padding: 10px;
     border-radius: 5px;
@@ -447,7 +488,6 @@
     grid-template-columns: 1fr 1fr;
     margin-top: 1em;
     gap: 1em;
-    /* background-color: ; */
 
     text-align: center;
     border-radius: 10px;
@@ -469,9 +509,17 @@
   /* Tablet FORM */
 
   .form {
+    border: 1px solid #fff;
+    border-radius: 8px;
     text-align: center;
     padding: 1em;
-    color: #168098;
+    color: #90c5d1;
+  }
+  #contact-me {
+    display: flex;
+    justify-content: left;
+    font-size: larger;
+    font-weight: bolder;
   }
   /* 
   .contact-me-form {
@@ -568,26 +616,59 @@
     /* border: 1px solid red; */
     padding: 1em;
   }
+  .item-fixed {
+    background-color: #5b6a74;
+    padding: 0.5em;
+    position: fixed;
+
+    bottom: 0;
+    right: 8px;
+    bottom: 5px;
+    text-decoration: none;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 /* TABLET ENDS HERE */
 
 /* Desktop Starts Here! */
 @media only screen and (min-width: 961px) {
+  .page {
+    background-image: url(images/wallpaper.jpg);
+    background-position: center bottom;
+  }
+
   .hero-container {
     backdrop-filter: blur(10px);
-    /* border: 1px solid #fff; */
+    border: 1px solid #fff;
+    border-radius: 8px;
     margin: 0 5em 5em 5em;
-    padding: 5em;
+    padding: 4em;
 
     display: flex;
     flex-direction: row;
     align-self: flex-start;
-    /* gap: 5em; */
+    gap: 5em;
   }
 
   .logo {
     display: none;
   }
+
+  .resume a {
+    color: #5995da;
+    text-decoration: none;
+  }
+  .project a {
+    color: #5995da;
+    text-decoration: none;
+  }
+  .contact-me a {
+    color: #5995da;
+    text-decoration: none;
+  }
+
   .dropdown {
     display: none;
   }
@@ -622,12 +703,6 @@
     padding-bottom: 50px;
   }
 
-  /* .hero-contact {
-    padding-top: 50px;
-    color: #fff;
-    font-size: 20px;
-    text-decoration: none;
-  } */
   .hero-contact {
     padding: 10px;
     border-radius: 5px;
@@ -695,11 +770,24 @@
   }
   /* Tablet FORM */
 
-  .form {
-    /* border: 1px solid #fff; */
+  /* .form {
+    border: 1px solid #fff;
     text-align: center;
     padding: 1em;
     color: #168098;
+  } */
+  .form {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1em;
+    color: #90c5d1;
+  }
+  #contact-me {
+    display: flex;
+    justify-content: left;
+    font-size: larger;
+    font-weight: bolder;
   }
 
   /* .contact-me-form {
@@ -797,6 +885,27 @@
     /* border: 1px solid red; */
     padding: 1em;
   }
+  /* 
+  .item img {
+    display: block;
+  } */
+
+  .item-fixed {
+    background-color: #5b6a74;
+    padding: 1em;
+    position: fixed;
+
+    bottom: 0;
+    right: 20px;
+    bottom: 50px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  /* .back-to-top {
+    position: fixed;
+  } */
 }
 
 /* Desktop Ends Here! */
