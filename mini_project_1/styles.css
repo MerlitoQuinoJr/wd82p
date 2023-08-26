@@ -222,15 +222,18 @@
 
   .projects {
     padding-top: 2em;
+    padding-bottom: 0;
     border: 1px solid black;
   }
 
   .projects-container {
-    padding: 2em;
+    padding: 0 2em 2em;
+    font-size: 40px;
   }
 
   .projects > h4 {
     text-align: center;
+    font-size: 30px;
   }
 
   .projects-container {
@@ -387,6 +390,7 @@
     color: #5995da;
     text-decoration: none;
   }
+
   .project a {
     color: #5995da;
     text-decoration: none;
@@ -479,9 +483,13 @@
 
   .projects > h4 {
     text-align: center;
+    font-size: 30px;
   }
 
   .projects-container {
+    padding: 0 2em 2em;
+    font-size: 40px;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 1em;
@@ -743,9 +751,13 @@
 
   .projects > h4 {
     text-align: center;
+    font-size: 30px;
   }
 
   .projects-container {
+    padding: 0 2em 2em;
+    font-size: 40px;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 1em;
