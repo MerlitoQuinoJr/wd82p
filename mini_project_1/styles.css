@@ -61,7 +61,6 @@
 /* footer */
 .footer {
   padding: 1.5em;
-
   background-color: #168098;
 
   text-align: center;
@@ -201,6 +200,10 @@
     width: 70%;
   }
 
+  .skills-title {
+    display: flex;
+    justify-content: center;
+  }
   .skills {
     text-align: center;
   }
