@@ -233,7 +233,9 @@
   /* Projects Starts Here! */
 
   .projects {
-    padding: 2em;
+    padding-top: 2em;
+    border: 1px solid black;
+
     /* background-color: #5995da; */
   }
 
