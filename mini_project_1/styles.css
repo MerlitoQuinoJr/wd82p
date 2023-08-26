@@ -4,18 +4,11 @@
   box-sizing: border-box;
 }
 
-/* .page {
-  background-image: url(images/wallpaper.jpg);
-  background-position: center bottom;
-} */
-
 .header-container {
   font-family: Arial, sans-serif;
-  /* background-color: #e7dfd8; */
-  /* background-color: #b3be62; */
+
   color: #168098;
   backdrop-filter: blur(10px);
-  /* height: 100vh; */
 }
 
 .links {
@@ -61,7 +54,6 @@
 
 .projects {
   background-color: #fff;
-  /* height: 100vh; */
 }
 
 /* End Peoject Section */
@@ -123,7 +115,6 @@
   .dropdown {
     padding: 1em;
     display: block;
-    /* border: 1px solid #fff; */
 
     display: flex;
     justify-content: space-between;
@@ -174,8 +165,6 @@
     font-size: 30px;
     text-decoration: underline;
     color: #168098;
-  }
-  .hero-title {
   }
 
   .hero-img {
@@ -235,15 +224,10 @@
   .projects {
     padding-top: 2em;
     border: 1px solid black;
-
-    /* background-color: #5995da; */
   }
 
   .projects-container {
     padding: 2em;
-    /* border: 1px solid black; */
-
-    /* background-color: #76aeed; */
   }
 
   .projects > h4 {
@@ -258,7 +242,7 @@
 
     text-align: center;
     border-radius: 10px;
-    /* background-color: red; */
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   }
   .projects-container > article {
@@ -339,13 +323,19 @@
 
   .form-container {
     backdrop-filter: blur(10px);
-    /* border: 1px solid red; */
+
     padding: 1em;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
   }
 
   .item-fixed {
     background-color: #5b6a74;
-    /* border: 1px solid #fff; */
+
     padding: 0.5em;
     position: fixed;
 
@@ -354,6 +344,7 @@
     bottom: 5px;
     text-decoration: none;
   }
+
   html {
     scroll-behavior: smooth;
   }
@@ -383,8 +374,14 @@
     gap: 1em;
   }
 
+  .dd-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2em;
+  }
   .logo {
-    display: none;
+    padding: 1em;
+    padding-left: 3em;
   }
 
   .resume a {
@@ -467,7 +464,7 @@
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-rows: 2fr 8fr; */
+
     background-color: #168098;
     gap: 3em;
 
@@ -493,7 +490,7 @@
 
     text-align: center;
     border-radius: 10px;
-    /* background-color: red; */
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   }
   .projects-container > article {
@@ -523,17 +520,6 @@
     font-size: larger;
     font-weight: bolder;
   }
-  /* 
-  .contact-me-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-
-    padding: 1em;
-
-    gap: 1em;
-  } */
 
   .contact-me-form {
     display: grid;
@@ -615,8 +601,14 @@
 
   .form-container {
     backdrop-filter: blur(10px);
-    /* border: 1px solid red; */
+
     padding: 1em;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
   }
   .item-fixed {
     background-color: #5b6a74;
@@ -654,8 +646,14 @@
     gap: 5em;
   }
 
+  .dd-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10em;
+  }
   .logo {
-    display: none;
+    padding: 1em;
+    padding-left: 10em;
   }
 
   .resume a {
@@ -731,7 +729,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    /* grid-template-rows: 2fr 8fr; */
+
     background-color: #168098;
     gap: 3em;
 
@@ -753,11 +751,10 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 1em;
     gap: 1em;
-    /* background-color: ; */
 
     text-align: center;
     border-radius: 10px;
-    /* background-color: red; */
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
   }
   .projects-container > article {
@@ -772,12 +769,6 @@
   }
   /* Tablet FORM */
 
-  /* .form {
-    border: 1px solid #fff;
-    text-align: center;
-    padding: 1em;
-    color: #168098;
-  } */
   .form {
     border: 1px solid #fff;
     border-radius: 8px;
@@ -791,17 +782,6 @@
     font-size: larger;
     font-weight: bolder;
   }
-
-  /* .contact-me-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-
-    padding: 1em;
-
-    gap: 1em;
-  } */
 
   .contact-me-form {
     display: grid;
@@ -884,14 +864,15 @@
 
   .form-container {
     backdrop-filter: blur(10px);
-    /* border: 1px solid red; */
+
     padding: 1em;
   }
-  /* 
-  .item img {
-    display: block;
-  } */
 
+  .footer {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
   .item-fixed {
     background-color: #5b6a74;
     padding: 1em;
@@ -905,9 +886,6 @@
   html {
     scroll-behavior: smooth;
   }
-  /* .back-to-top {
-    position: fixed;
-  } */
 }
 
 /* Desktop Ends Here! */
