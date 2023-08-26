@@ -38,7 +38,7 @@
 
 .name {
   font-size: 40px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .content {
@@ -162,7 +162,7 @@
 
   .name {
     font-size: 30px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     color: #168098;
   }
 
@@ -200,10 +200,6 @@
     width: 70%;
   }
 
-  .skills-title {
-    display: flex;
-    justify-content: center;
-  }
   .skills {
     text-align: center;
   }
@@ -682,7 +678,7 @@
     font-size: 45px;
   }
   .name {
-    text-decoration: underline;
+    /* text-decoration: underline; */
     font-size: 45px;
   }
 
