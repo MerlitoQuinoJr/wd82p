@@ -30,14 +30,14 @@ let balance = 1000;
 
 let transaction1 = 500;
 balance += transaction1;
-console.log(balance);
+console.log("Transaction1", balance);
 
 let transaction2 = 200;
 balance -= transaction2;
-console.log(balance);
+console.log("Transaction2", balance);
 
 let transaction3 = 1000;
 balance -= transaction3;
-console.log(balance);
+console.log("Transaction3", balance);
 
 console.log("Final balance", balance);
