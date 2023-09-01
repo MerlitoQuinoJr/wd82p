@@ -8,6 +8,9 @@
 // - 'transaction3': Deduct 1000 from 'balance'.
 
 // Your code here
+
+// Solution 1
+
 // let balance = 1000;
 
 // let transaction1 = 500;
@@ -32,12 +35,12 @@ let transaction1 = 500;
 balance += transaction1;
 console.log("Transaction1", balance);
 
-let transaction2 = 200;
-balance -= transaction2;
+let transaction2 = -200;
+balance += transaction2;
 console.log("Transaction2", balance);
 
-let transaction3 = 1000;
-balance -= transaction3;
+let transaction3 = -1000;
+balance += transaction3;
 console.log("Transaction3", balance);
 
 console.log("Final balance", balance);
