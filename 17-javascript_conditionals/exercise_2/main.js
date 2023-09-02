@@ -6,11 +6,10 @@
 
 // Your code here
 let testScore1 = parseInt(prompt("Your score No. 1:"));
-// console.log(typeof testScore1);
+
 let testScore2 = parseInt(prompt("Your score No. 2:"));
-// console.log(typeof testScore2);
+
 let testScore3 = parseInt(prompt("Your score No. 3:"));
-// console.log(typeof testScore3);
 
 let averageScore = (testScore1 + testScore2 + testScore3) / 3;
 

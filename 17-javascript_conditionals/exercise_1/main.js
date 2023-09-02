@@ -29,18 +29,32 @@
 
 // console.log("Final balance", balance3);
 
+// let balance = 1000;
+
+// let transaction1 = 500;
+// balance += transaction1;
+// console.log("Transaction1", balance);
+
+// let transaction2 = -200;
+// balance += transaction2;
+// console.log("Transaction2", balance);
+
+// let transaction3 = -1000;
+// balance += transaction3;
+// console.log("Transaction3", balance);
+
+// console.log("Final balance", balance);
+
 let balance = 1000;
+let transaction1, transaction2, transaction3;
 
-let transaction1 = 500;
-balance += transaction1;
-console.log("Transaction1", balance);
+transaction1 = balance + 500;
+balance = transaction1; //update balance
 
-let transaction2 = -200;
-balance += transaction2;
-console.log("Transaction2", balance);
+transaction2 = balance - 200;
+balance = transaction2; //update balance
 
-let transaction3 = -1000;
-balance += transaction3;
-console.log("Transaction3", balance);
+transaction3 = balance - 1000;
+balance = transaction3; //update balance
 
-console.log("Final balance", balance);
+console.log(balance);
