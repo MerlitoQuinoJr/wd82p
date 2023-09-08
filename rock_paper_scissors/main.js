@@ -8,14 +8,14 @@
 // 1. Get input of human player using prompt method
 // 2. Store the human input in a variable
 // 3. Get the weapon of computer
-// 4. Create a function that generates random weapon of choice for computer -> "rock", "paper", "scissors"
+// 4. Create a function that generates random weapon of choice for computer -> 'rock', 'paper', 'scissors'
 // 5. Store the computer weapon in a variable
 // 6. Create a function that takes two parameters,
 // 7. Process the weapons to find out the results
 
 function getComputerSelection() {
-  const weapons = ["rock", "paper", "scissors"];
-  const randomIndex = Math.round(Math.random() * (weapons.length - 1));
+  const weapons = ["rock", "paper", "scissors"]; //ARRAY
+  const randomIndex = Math.round(Math.random() * (weapons.length - 1)); // RANDOM WEAPON
 
   return weapons[randomIndex];
 }
@@ -39,8 +39,9 @@ function playRound(playerSelection, computerSelection) {
 
 // console.log(playRound(playerSelection, computerSelection));
 
+// Creating 3 Rounds!
 function game() {
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 0; i < 3; i++) {
     const playerSelection = prompt("Select a Weapon!");
     const computerSelection = getComputerSelection();
 
