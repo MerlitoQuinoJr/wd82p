@@ -53,7 +53,6 @@ function gameHandler(playerWeapon) {
     tieScore++;
     tieScoreLabel.textContent = tieScore;
   }
-  console.log(result);
 }
 
 rockBtn.addEventListener("click", () => gameHandler(rockBtn.textContent));

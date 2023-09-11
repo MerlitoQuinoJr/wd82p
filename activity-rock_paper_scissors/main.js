@@ -1,16 +1,16 @@
-// Buttons
-const rockBtn = document.getElementById("rock-btn");
-const paperBtn = document.getElementById("paper-btn");
-const scissorsBtn = document.getElementById("scissors-btn");
-// Scoreboard Labels
-const userScoreLabel = document.getElementById("player-score-label");
+//buttons
+const rockBtn = document.getElementById("btn-rock");
+const paperBtn = document.getElementById("btn-paper");
+const scissorsBtn = document.getElementById("btn-scissors");
+
+const playerScoreLabel = document.getElementById("player-score-label");
 const computerScoreLabel = document.getElementById("computer-score-label");
 const tieScoreLabel = document.getElementById("tie-score-label");
-// Turns Labels
+
 const playerTurnLabel = document.getElementById("player-turn-label");
 const computerTurnLabel = document.getElementById("computer-turn-label");
 
-let userScore = 0;
+let playerScore = 0;
 let computerScore = 0;
 let tieScore = 0;
 
@@ -30,9 +30,11 @@ function playRound(playerWeapon, computerWeapon) {
 
 function getComputerWeapon() {
   const weapons = ["rock", "paper", "scissors"];
-  const randomIndex = Math.round(Math.random() * (weapons.length - 1));
-  return weapons[randomIndex];
+  const randomWeapon = Math.round(Math.random() * (weapons.length - 1));
+  return weapons[randomWeapon];
 }
+
+// console.log(getComputerWeapon());
 
 function gameHandler(playerWeapon) {
   const computerSelection = getComputerWeapon();
@@ -44,8 +46,8 @@ function gameHandler(playerWeapon) {
   const result = playRound(playerSelection, computerSelection);
 
   if (result === "You win") {
-    userScore++;
-    userScoreLabel.textContent = userScore;
+    playerScore++;
+    playerScoreLabel.textContent = playerScore;
   } else if (result === "You lose") {
     computerScore++;
     computerScoreLabel.textContent = computerScore;
@@ -55,7 +57,6 @@ function gameHandler(playerWeapon) {
   }
   console.log(result);
 }
-
 rockBtn.addEventListener("click", () => gameHandler(rockBtn.textContent));
 paperBtn.addEventListener("click", () => gameHandler(paperBtn.textContent));
 scissorsBtn.addEventListener("click", () =>
