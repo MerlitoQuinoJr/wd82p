@@ -11,9 +11,8 @@ const symbols = ["-"];
 let currentNum = "";
 let prevNum = "";
 let operation = "";
-let symbol = "";
 
-function computation(currentNum, prevNum, operation, symbol) {
+function computation(currentNum, prevNum, operation) {
   let total = "";
 
   const current = parseFloat(currentNum);
@@ -42,6 +41,10 @@ function computation(currentNum, prevNum, operation, symbol) {
   return total;
 }
 
+function appendNumber(number) {
+  currentNum += number;
+}
+
 deleteBtn.addEventListener("click", function (e) {
   displayOperation.value = displayOperation.value.slice(0, -1);
   // display.value = display.value.slice(0, -1);
@@ -49,6 +52,8 @@ deleteBtn.addEventListener("click", function (e) {
 
 equalsBtn.addEventListener("click", function (e) {
   // console.log(e.target.textContent);
+  displayOperation.value = +prevNum + "" + operation + "" + currentNum;
+
   currentNum = computation(currentNum, prevNum, operation);
   display.value = currentNum;
 });
@@ -65,9 +70,11 @@ clearBtn.addEventListener("click", function (e) {
 numBtns.forEach((numBtn) => {
   numBtn.addEventListener("click", function (e) {
     // console.log(e.target.textContent);
-    currentNum += e.target.textContent;
 
-    displayOperation.value = currentNum;
+    // currentNum += e.target.textContent;
+    appendNumber(e.target.textContent);
+
+    displayOperation.value = prevNum + "" + operation + "" + currentNum;
 
     // display.value += currentNum;
   });
@@ -78,11 +85,11 @@ operatorBtns.forEach((operatorBtn) => {
     // console.log(e.target.textContent);
     operation = e.target.textContent;
     prevNum = currentNum;
-    displayOperation.value = prevNum;
+    displayOperation.value = prevNum + "" + operation;
 
     currentNum = "";
 
-    displayOperation.value += operation + "" + currentNum;
+    // displayOperation.value += operation + "" + currentNum;
 
     // display.value += currentNum;
   });
