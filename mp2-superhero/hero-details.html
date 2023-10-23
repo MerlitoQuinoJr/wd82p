@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Hero</title>
+  </head>
+  <body>
+    <div>
+      <h2>Favorite Hero</h2>
+      <div id="hero-details">
+        <ul id="favorites-list"></ul>
+      </div>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const heroId = urlParams.get("id");
+
+      const fetchHeroDetails = async (heroId) => {
+        const apiKey = 7526865600681411;
+        const url = `https://www.superheroapi.com/api.php/${apiKey}/${heroId}`;
+        const response = await fetch(url);
+        const heroData = await response.json();
+
+        showHeroDetails(heroData);
+      };
+
+      const showHeroDetails = (heroData) => {
+        const heroDetailsContainer = document.getElementById("hero-details");
+        heroDetailsContainer.innerHTML = `
+            <img src="${heroData.image.url}" alt="${heroData.name}">
+            <p>Name: ${heroData.name}</p>
+            <!-- Add more details as needed -->
+        `;
+      };
+
+      fetchHeroDetails(heroId);
+    </script>
+  </body>
+</html>

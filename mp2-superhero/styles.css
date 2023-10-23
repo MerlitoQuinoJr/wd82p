@@ -24,6 +24,10 @@ input {
   border: none;
   background-color: transparent;
 }
+
+a {
+  text-decoration: none;
+}
 li {
   list-style-type: none;
 }
@@ -57,7 +61,7 @@ img {
 }
 
 .app-header-title span {
-  color: blueviolet;
+  color: #aa5042;
 }
 .app-header-search {
   border: 1px solid #505050;
@@ -211,7 +215,7 @@ img {
 
 .add-fav-btn {
   font: 400;
-  color: red;
+  color: #aa5042;
   cursor: pointer;
 }
 

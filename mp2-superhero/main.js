@@ -2,13 +2,14 @@ const allNavsHead = document.querySelectorAll(".nav-head-single");
 const allNavsBody = document.querySelectorAll(".nav-body-single");
 const searchForm = document.querySelector(".app-header-search");
 let searchList = document.getElementById("search-list");
+const favBtn = document.querySelector(".fav-btn");
 
 let activeNav = 1,
   allData;
 
 const main = () => {
-  showActiveNavBody();
   showActiveNavHead();
+  showActiveNavBody();
 };
 
 const showActiveNavHead = () =>
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
   main();
 });
 
-// button event listeners
 allNavsHead.forEach((singleNavHead) => {
   singleNavHead.addEventListener("click", () => {
     hideAllNavHead();
@@ -48,10 +48,7 @@ const getInputValue = (event) => {
   fetchAllSuperHero(searchText);
 };
 
-// search form submission
 searchForm.addEventListener("submit", getInputValue);
-
-// api key => 7526865600681411
 
 const apiKey = 7526865600681411;
 const fetchAllSuperHero = async (searchText) => {
@@ -100,6 +97,15 @@ const showSuperheroDetails = (data) => {
     `;
 
   document.querySelector(".name").textContent = data[0].name;
+
+  document.querySelector(".fav-btn").innerHTML = `
+    <button type="button" class="toggle-fav-btn">
+      ${
+        isHeroFavorite(data[0].id)
+          ? "Remove from Favorites"
+          : "Add to Favorites"
+      }
+    </button>`;
 
   document.querySelector(".powerstats").innerHTML = `
     <li>
@@ -227,4 +233,36 @@ const showSuperheroDetails = (data) => {
     <span>${data[0].connections["relatives"]}</span>
 </li>
 `;
+
+  // Add event listener to the favorite button
+  const toggleFavBtn = document.querySelector(".toggle-fav-btn");
+  toggleFavBtn.addEventListener("click", () => toggleFavorite(data[0]));
 };
+
+const isHeroFavorite = (heroId) => {
+  // Check if the hero is in favorites
+  return favorites.has(heroId);
+};
+
+const toggleFavorite = (hero, event) => {
+  const heroId = hero.id;
+  if (isHeroFavorite(heroId)) {
+    // If hero is already a favorite, remove it
+    favorites.delete(heroId);
+  } else {
+    // If hero is not a favorite, add it
+    favorites.add(heroId);
+  }
+
+  // Update the favorite button text
+  document.querySelector(".toggle-fav-btn").textContent = isHeroFavorite(heroId)
+    ? "Remove from Favorites"
+    : "Add to Favorites";
+
+  if (isHeroFavorite(heroId)) {
+    event.preventDefault();
+    window.location.href = `hero-details.html?id=${heroId}`;
+  }
+};
+
+let favorites = new Set();
